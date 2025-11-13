@@ -14,7 +14,7 @@ public class TestController {
 
     private final TestService testService;
 
-    @GetMapping("/All")
+    @GetMapping("/all")
     public List<String> getAll() {
         return testService.getAll();
     }
