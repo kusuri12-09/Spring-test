@@ -1,1 +1,21 @@
-spring.application.name=test
+spring:
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: false
+    database-platform: org.hibernate.dialect.MySQLDialect
+    generate-ddl: true
+    open-in-view: false
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/${SCHEMA_NAME}  # DB ??? ?? ??
+    username: root
+    password: ${PASSWORD}  # DB ???? ??
+
+server:
+  port: 8080
