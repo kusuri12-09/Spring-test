@@ -19,6 +19,15 @@ public class Board {
     @Column(length = 1024)
     private String content;
 
+    @Column
+    private String author;
+
+    public Board(String title, String content, String author) {
+        this.title = title;
+        this.content = content;
+        this.author = author;
+    }
+
     // 객체 초기화할 때 사용, setter를 사용하지 않는 이유는 찾아보기
     public void updateBoard(String title, String content) {
         this.title = title;
